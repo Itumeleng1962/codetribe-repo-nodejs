@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Media Server API Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Mock Media Server API Documentation</h1>
+    <p>This API provides endpoints to manage movies, series, and songs data.</p>
+
+    <h2>Base URL</h2>
+    <p>http://localhost:3000</p>
+
+    <h2>Endpoints</h2>
+
+    <div class="endpoint">
+        <h3>Movies</h3>
+        <div>
+            <span class="method get">GET</span>
+            <code>/movies</code>
+            <p>Get all movies</p>
+        </div>
+        <div>
+            <span class="method post">POST</span>
+            <code>/movies</code>
+            <p>Add a new movie</p>
+            <div class="example">
+                <p>Example request body:</p>
+                <pre>{
+    "title": "The Matrix",
+    "director": "The Wachowskis",
+    "year": 1999,
+    "genre": "Sci-Fi",
+    "duration": 136
+}</pre>
+            </div>
+        </div>
+        <div>
+            <span class="method put">PUT</span>
+            <code>/movies/:id</code>
+            <p>Update a movie by ID</p>
+        </div>
+        <div>
+            <span class="method delete">DELETE</span>
+            <code>/movies/:id</code>
+            <p>Delete a movie by ID</p>
+        </div>
+    </div>
+
+    <div class="endpoint">
+        <h3>Series</h3>
+        <div>
+            <span class="method get">GET</span>
+            <code>/series</code>
+            <p>Get all series</p>
+        </div>
+        <div>
+            <span class="method post">POST</span>
+            <code>/series</code>
+            <p>Add a new series</p>
+            <div class="example">
+                <p>Example request body:</p>
+                <pre>{
+    "title": "Breaking Bad",
+    "creator": "Vince Gilligan",
+    "startYear": 2008,
+    "endYear": 2013,
+    "genre": "Drama",
+    "seasons": 5
+}</pre>
+            </div>
+        </div>
+        <div>
+            <span class="method put">PUT</span>
+            <code>/series/:id</code>
+            <p>Update a series by ID</p>
+        </div>
+        <div>
+            <span class="method delete">DELETE</span>
+            <code>/series/:id</code>
+            <p>Delete a series by ID</p>
+        </div>
+    </div>
+
+    <div class="endpoint">
+        <h3>Songs</h3>
+        <div>
+            <span class="method get">GET</span>
+            <code>/songs</code>
+            <p>Get all songs</p>
+        </div>
+        <div>
+            <span class="method post">POST</span>
+            <code>/songs</code>
+            <p>Add a new song</p>
+            <div class="example">
+                <p>Example request body:</p>
+                <pre>{
+    "title": "Bohemian Rhapsody",
+    "artist": "Queen",
+    "album": "A Night at the Opera",
+    "year": 1975,
+    "genre": "Rock",
+    "duration": 355
+}</pre>
+            </div>
+        </div>
+        <div>
+            <span class="method put">PUT</span>
+            <code>/songs/:id</code>
+            <p>Update a song by ID</p>
+        </div>
+        <div>
+            <span class="method delete">DELETE</span>
+            <code>/songs/:id</code>
+            <p>Delete a song by ID</p>
+        </div>
+    </div>
+
+    <h2>Error Handling</h2>
+    <p>All endpoints return appropriate HTTP status codes:</p>
+    <ul>
+        <li>200: Success</li>
+        <li>201: Created (for POST requests)</li>
+        <li>400: Bad Request</li>
+        <li>404: Not Found</li>
+        <li>500: Server Error</li>
+    </ul>
+</body>
+</html> 
